@@ -61,6 +61,7 @@ class DashboardFragment : Fragment() {
         recyclerView.adapter = dashboardAdapter
         recyclerView.addOnScrollListener(object : EndlessRecyclerViewScrollListener(layoutManager) {
             override fun onLoadMore(page: Int, totalItemsCount: Int) {
+                Log.d("swiperefreshloadmore", page.toString())
                 getMovie(page)
             }
         })
